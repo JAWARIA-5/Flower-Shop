@@ -1,0 +1,121 @@
+.main {
+  padding: 20px;
+  background-color: rgb(249, 241, 233);
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.grid-item {
+  padding: 20px;
+  border-radius: 8px;
+  position: relative; /* Add position relative for absolute positioning */
+}
+
+.number {
+  font-size: 24px;
+  font-weight: bold;
+  color: #da7789;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 10px;
+  color: black;
+}
+
+.description {
+  margin-top: 10px;
+  color: rgb(48, 47, 47);
+}
+
+/* Add line to the left of each grid item */
+.grid-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -10px; /* Adjust this value for the distance from the left */
+  width: 2px;
+  height: 100%;
+  background-color: #da7789; /* Tea pink color */
+}
+
+@media screen and (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .grid-container {
+    grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+  }
+
+  .grid-item {
+    padding-left: 12px; /* Add padding to create space for the line */
+  }
+
+  /* Adjust the position of the line for smaller screens */
+  .grid-item::before {
+    left: 0;
+  }
+}
+.container {
+  display: flex;
+  align-items: center;
+}
+
+.image-wrapper {
+  display: flex;
+}
+
+.image-crop {
+  width: 100%;/* Adjust the width of the image container */
+   /* height: 1vh; Adjust the height of the image container */
+  overflow: hidden;
+}
+
+.image-crop img {
+  width: 100%; /* Make the image fill the container */
+  height: auto; /* Maintain aspect ratio */
+  display: block;
+  border-top-left-radius: 50%; /* Curved top left corner */
+  border-top-right-radius: 50%; /* Curved top right corner */
+}
+
+.text {
+  margin-left: 20px; /* Adjust the spacing between images and text */
+  color:black;
+}
+.abtflo p{
+  color:#da7789;
+  font-size: 1rem;
+}
+.blossom p{
+  color:black;
+  font-size: 2.5rem;
+}
+.blossomdesc p{
+  color:black;
+  font-size: 1rem;
+}
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+  }
+
+  .image-wrapper {
+    flex-direction: column; /* Stack images vertically on smaller screens */
+  }
+
+  .image-crop {
+    margin-right: 0; /* Remove margin between images */
+    margin-bottom: 20px; /* Add margin below each image */
+  }
+}
+

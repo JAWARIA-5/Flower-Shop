@@ -1,6 +1,19 @@
+@font-face {
+  font-family: 'Emotion';
+  src: url('/Users/webprojectv/my-app/src/against regular.woff') format('woff');
+  font-weight: normal; 
+  font-style: normal; 
+}
+@font-face {
+  font-family: 'Playfair';
+  src: url('/Users/webprojectv/my-app/src/PlayfairDisplay-Regular.woff') format('woff'); /* Update the path to your font file */
+  font-weight: normal; 
+  font-style: normal; 
+}
+
 .main {
   padding: 20px;
-  background-color: rgb(249, 241, 233);
+  background-color: rgb(250, 246, 243);
 }
 
 .grid-container {
@@ -33,15 +46,14 @@
   color: rgb(48, 47, 47);
 }
 
-/* Add line to the left of each grid item */
 .grid-item::before {
   content: "";
   position: absolute;
   top: 0;
-  left: -10px; /* Adjust this value for the distance from the left */
+  left: -10px; 
   width: 2px;
   height: 100%;
-  background-color: #da7789; /* Tea pink color */
+  background-color: #da7789; 
 }
 
 @media screen and (max-width: 768px) {
@@ -57,65 +69,317 @@
   }
 
   .grid-item {
-    padding-left: 12px; /* Add padding to create space for the line */
+    padding-left: 12px; 
   }
 
-  /* Adjust the position of the line for smaller screens */
   .grid-item::before {
     left: 0;
   }
 }
+
 .container {
+  margin-top:4rem;
   display: flex;
-  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 4rem;
 }
 
 .image-wrapper {
   display: flex;
+  align-items: flex-end;
+  width: 50%; 
 }
 
 .image-crop {
-  width: 100%;
-   /* height: 1vh; Adjust the height of the image container */
+  width: 50%; 
   overflow: hidden;
+  margin-left: 20px;
+  border-top-left-radius: 50%; 
+  border-top-right-radius: 50%; 
+  border-bottom-left-radius: 3%;
+  border-bottom-right-radius: 3%;
 }
 
 .image-crop img {
-  width: 100%; /* Make the image fill the container */
-  height: auto; /* Maintain aspect ratio */
+  margin-right: 1rem;
+  width: 100%; 
+  height: auto; 
   display: block;
-  border-top-left-radius: 50%; /* Curved top left corner */
-  border-top-right-radius: 50%; /* Curved top right corner */
 }
 
 .text {
-  margin-left: 20px; /* Adjust the spacing between images and text */
-  color:black;
+  margin-top:3rem;
+  width: 50%; /* Take half of the container width */
+  color: black;
+  padding-left: 20px; /* Add padding to the text */
 }
-.abtflo p{
-  color:#da7789;
+
+.abtflo p {
+  color: #da7789;
   font-size: 1rem;
 }
-.blossom p{
-  color:black;
+
+.blossom p {
+  color: black;
   font-size: 2.5rem;
 }
-.blossomdesc p{
-  color:black;
+
+.blossomdesc p {
+  color: black;
   font-size: 1rem;
 }
+
 @media screen and (max-width: 768px) {
   .container {
     flex-direction: column; /* Stack items vertically on smaller screens */
   }
 
-  .image-wrapper {
-    flex-direction: column; /* Stack images vertically on smaller screens */
+  .image-wrapper, .text {
+    width: 100%; /* Take full width on smaller screens */
   }
 
   .image-crop {
-    margin-right: 0; /* Remove margin between images */
-    margin-bottom: 20px; /* Add margin below each image */
+    margin-right: 0;
+    margin-bottom: 20px;
+    width: 100%; /* Adjust width for images on smaller screens */
   }
 }
 
+.best-seller{
+  background-color: rgb(250, 246, 243);
+  padding:2rem;
+}
+.bsttext{
+  color:#FF6E4E;
+  font-size:medium;
+  text-align: center;
+}
+
+.bstmaintexy{
+  color:black;
+  font-size:3.5rem;
+  text-align: center;
+  font-family: Emotion;
+}
+.exp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  margin-top: 3rem; /* Adjust margin as needed */
+}
+
+.videopl {
+  flex: 1; /* Let the video take up available space */
+  max-width: 50%; /* Limit the maximum width of the video */
+  padding:3rem;
+}
+
+.videopl video {
+  width: 100%; /* Ensure the video takes up full width of its container */
+  height: auto; /* Allow the video to adjust its height according to aspect ratio */
+  max-width: 100%; /* Ensure video doesn't exceed its container width */
+  height: auto; /* Allow the video to adjust its height according to aspect ratio */
+  max-height: 400px; /* Set the maximum height of the video */
+}
+
+.text {
+  flex: 1; /* Let the text take up available space */
+  padding: 20px; /* Add padding to the text */
+  box-sizing: border-box; /* Ensure padding is included in width calculation */
+  color: black;
+  
+}
+.vdhead{
+  font-family:'Times New Roman', Times, serif;
+  font-weight: bold;
+}
+.vdt1{
+font-family: sans-serif;
+font-size: medium;
+color:#FF6E4E;
+}
+
+/* For responsiveness */
+@media (max-width: 768px) {
+  .exp {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+  }
+  
+  .videopl,
+  .text {
+    max-width: 100%; /* Adjust the maximum width for smaller screens */
+  }
+
+  .videopl video {
+    max-height: 300px; /* Reduce the maximum height of the video for smaller screens */
+  }
+}
+
+.exp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  margin-top: 3rem; /* Adjust margin as needed */
+}
+
+.videopl {
+  flex: 1; /* Let the video take up available space */
+  padding: 1rem; /* Adjust padding for smaller screens */
+  box-sizing: border-box; /* Ensure padding is included in width calculation */
+}
+
+.videopl video {
+  width: 100%; /* Ensure the video takes up full width of its container */
+  height: auto; /* Allow the video to adjust its height according to aspect ratio */
+  max-width: 100%; /* Ensure video doesn't exceed its container width */
+  max-height: 400px; /* Set the maximum height of the video */
+}
+
+.text {
+  flex: 1; /* Let the text take up available space */
+  padding: 1rem; /* Adjust padding for smaller screens */
+  box-sizing: border-box; /* Ensure padding is included in width calculation */
+  color: black;
+}
+
+.vdhead {
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+}
+
+.vdt1 {
+  font-family: sans-serif;
+  font-size: medium;
+  color: #FF6E4E;
+}
+
+/* For responsiveness */
+@media (max-width: 768px) {
+  .exp {
+    flex-direction: row; /* Stack items vertically on smaller screens */
+  }
+
+  .videopl,
+  .text {
+    max-width: 100%; /* Adjust the maximum width for smaller screens */
+  }
+
+  .videopl video {
+    max-height: 200px; /* Reduce the maximum height of the video for smaller screens */
+  }
+}
+
+@media (max-width: 1024px) {
+  .exp {
+    flex-direction: row; /* Stack items vertically on smaller screens */
+  }
+
+  .videopl,
+  .text {
+    max-width: 100%; /* Adjust the maximum width for smaller screens */
+    text-align: center;
+  }
+
+  .videopl video {
+    max-height: 200px; /* Reduce the maximum height of the video for smaller screens */
+  }
+}
+@media (max-width: 768px) {
+  .exp {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+  }
+
+  .videopl,
+  .text {
+    max-width: 100%; /* Adjust the maximum width for smaller screens */
+  }
+
+  .videopl video {
+    max-height: 200px; /* Reduce the maximum height of the video for smaller screens */
+  }
+}
+.order{
+  background-color: #1f0406;
+  margin-top:4rem;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.ordimage-wrapper {
+  display: flex;
+  width: 100%; 
+  padding-top:4rem;
+  padding-left: 4rem;
+}
+
+.ordimage-crop {
+  width: 100%; 
+  overflow: hidden;
+  margin-left: 20px;
+  border-top-left-radius: 50%; 
+  border-top-right-radius: 50%; 
+}
+
+.ordimage-crop img {
+  margin-right: 1rem;
+  width: 100%; 
+  height: auto; 
+  display: block;
+}
+
+.calltoaction p {
+  color:#FF6E4E;
+  font-size: 1rem;
+  padding-left: 1rem;
+
+}
+
+.ordernow p {
+  color: wite;
+  font-size: 2.5rem;
+  font-family: 'Times New Roman', Times, serif;
+  padding-left: 1rem;
+}
+
+
+@media (max-width: 768px) {
+  .ordimage-wrapper {
+    width: 80%; 
+    padding: 1rem; 
+    text-align: center; 
+  }
+
+  .ordimage-crop img {
+    margin-right: 0; 
+    margin-bottom: 1rem; 
+  }
+  .calltoaction p {
+    font-size: 0.6rem;
+  }
+  .ordernow p {
+    font-size: 0.8rem; 
+  }
+}
+@media (max-width: 1024px) {
+  .ordimage-wrapper {
+    width: 80%; 
+    padding: 1rem; 
+    text-align: center; 
+  }
+
+  .ordimage-crop img {
+    margin-right: 0; 
+    margin-bottom: 1rem; 
+  }
+  .calltoaction p {
+    font-size: 1rem;
+  }
+  .ordernow p {
+    font-size: 1.5rem; 
+  }
+}

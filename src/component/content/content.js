@@ -1,7 +1,9 @@
 import React from 'react'
 import "./content.css";
-import Mphool from './moodyphool.jpg';
-import Sphool from './sidephool.jpg';
+import t from '../images/tulips.jpg';
+import f from '../images/florist.jpg';
+import vid from '../images/orangeflower.mp4';
+import o from '../images/orderflo.jpg';
 
 const Main = () => {
   return (
@@ -30,29 +32,67 @@ const Main = () => {
         </div>
       </div>
     </div>
-    <div class="container">
-  <div class="image-wrapper">
-    <div class="image-crop">
-      <img src={Mphool} alt="1"/>
+    <div className="container">
+      <div className="image-wrapper">
+        <div className="image-crop">
+          <img src={t} alt="1"/>
+        </div>
+        <div className="image-crop">
+          <img src={f} alt="1"/>
+        </div>
+      </div>
+      <div className="text">
+        <div className="abtflo">  
+          <p>About Bloomila</p>
+        </div>
+        <div className="blossom">
+          <p>Blossoming Your Special Moments with Nature's Finest</p>
+        </div>
+        <div className="blossomdesc">
+          <p>Welcome to Florist, where floral artistry meets passion for nature's beauty. Our story is rooted in a deep love for flowers and a commitment to creating unforgettable moments for our customers.</p>
+        </div>
+        <button type="button" className="btn btn-secondary btn-lg">Read More</button>
+      </div>
     </div>
-    <div class="image-crop">
-    <img src={Sphool} alt="1"/>
+    <div className="best-seller">
+      <div className="bsttext">
+        Best Sellers
+      </div>
+      <div className="bstmaintexy">
+         Discover the Top Choices
+      </div>
+      <div className="bstmaintexy">
+         At Bloomila
+      </div>
     </div>
+    <div className="exp">
+    <div class="videopl">
+    <video autoPlay muted loop >
+      <source src={vid} type="video/mp4"/>
+      Your browser does not support the video tag.
+    </video>
   </div>
-  <div class="text">
-    <div className="abtflo">  
-      <p>About Bloomila</p>
-    </div>
-    <div className="blossom">
-     <p>Blossoming Your Special Moments with Nature's Finest</p>
-    </div>
-    <div className="blossomdesc">
-      <p>Welcome to Florist, where floral artistry meets passion for nature's beauty. Our story is rooted in a deep love for flowers and a commitment to creating unforgettable moments for our customers.</p>
-    </div>
-    <button type="button" class="btn btn-secondary btn-lg">Read More</button>
+  <div className="text">
+    <h2 className="vdhead">You Choose the Occasion. We'll Deliver the Flowers</h2>
+    <p className="vdt1">Spread Love with Fresh Flowers.</p>
+    <p className="vdt2"> We Offer Beautiful Arrangements for Every Occasion. Handpicked, Delivered with Care. Brighten Someone's Day with Our Blooms. Express Yourself with Flowers. Let Our Flowers Speak for You..</p>
   </div>
 </div>
-
+<div className="order">
+      <div className="ordimage-wrapper">
+        <div className="ordimage-crop">
+          <img src={o} alt="1"/>
+        </div>
+      </div>
+      <div className="ordtext">
+        <div className="calltoaction">  
+          <p>Call to Action</p>
+        </div>
+        <div className="ordernow">
+          <p>Explore Our Exquisite Floral Collections & Shop Now for the Perfect Blooms</p>
+        </div>
+        </div>
+</div>
     </>
   );
 };

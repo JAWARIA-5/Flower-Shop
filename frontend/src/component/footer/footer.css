@@ -1,13 +1,13 @@
 @font-face {
     font-family: 'Garamond';
-    src: url('/Users/webprojectv/my-app/src/Font/CormorantGaramond-Bold.woff') format('woff');
+    src: url('/Users/webprojectv/frontend/src/Font/CormorantGaramond-Bold.woff') format('woff');
     /* You can add more src declarations for different file formats (e.g., woff2, ttf) */
     font-weight: normal; /* Adjust font weight if needed */
     font-style: normal; /* Adjust font style if needed */
 }
 @font-face {
     font-family: 'Heebo';
-    src: url('/Users/webprojectv/my-app/src/Font/Heebo-Light.woff') format('woff');
+    src: url('/Users/webprojectv/frontend/src/Font/Heebo-Light.woff') format('woff');
     /* You can add more src declarations for different file formats (e.g., woff2, ttf) */
     font-weight: normal; /* Adjust font weight if needed */
     font-style: normal; /* Adjust font style if needed */
@@ -21,37 +21,42 @@
   }
   
   /* Footer Columns */
-  .footer-column {
-    flex: 1;
+  .footer-column1 {
+    width: 40%;
   }
+  .footer-column2 {
+    width: 30%;
+    text-align: center;
+  }
+  .footer-column3 {
+    width: 30%;
+  }
+
 .fthead{
     font-family: "Garamond";
 }
 .ftbody{
     font-family:"Heebo";
+    font-size:medium;
+    margin-right: 1rem;
 }
-  .footer-column h2,
-  .footer-column h3 {
-    color: #333;
-    margin-bottom: 10px;
-  }
-  
-  .footer-column ul {
+  .ftbody {
     list-style: none;
     padding: 0;
   }
   
-  .footer-column ul li {
+  .ftbody li {
     margin-bottom: 5px;
   }
   
-  .footer-column a {
+  .ftbody a {
     color: #666;
     text-decoration: none;
   }
   
-  .footer-column a:hover {
-    text-decoration: underline;
+  .ftbody a:hover {
+    color:#FF6E4E;
+    text-decoration: none;
   }
   
   /* Social Icons */
@@ -68,10 +73,22 @@
     font-size: 1.5rem;
     margin-left: 10px;
   }
-  
-  /* Copyright */
+
   .copyright {
-    margin-top: 20px;
+    font-family: "Garamond";
     color:black;
+    padding-left:3rem;
   }
   
+  @media (max-width: 899px) {
+    .fthead{
+      font-size: medium;
+  }
+  .ftbody{
+      font-size:0.7rem;
+      margin-right: 1rem;
+  }
+  .copyright {
+    font-size:0.9rem;
+  }
+  }

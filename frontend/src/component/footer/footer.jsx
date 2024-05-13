@@ -7,13 +7,13 @@ const Footer = () => {
     <footer>
       <div className="footer-container">
         {/* Column 1 */}
-        <div className="footer-column">
+        <div className="footer-column1">
           <p className="fthead">Flower Shop</p>
           <p className="ftbody">Welcome to the world of Florist, where flowers come to life with love and creativity. Discover our story, our passion for flowers, and our commitment to making every moment memorable.</p>
         </div>
 
         {/* Column 2 */}
-        <div className="footer-column">
+        <div className="footer-column2">
           <p className="fthead">Links</p>
           <ul className="ftbody">
             <li><a href="/">Home</a></li>
@@ -24,7 +24,7 @@ const Footer = () => {
         </div>
 
         {/* Column 3 */}
-        <div className="footer-column">
+        <div className="footer-column3">
           <p className="fthead">Contact Us</p>
           <p className="ftbody">
             Address: 13 Fifth Avenue, New York 101660 <br />

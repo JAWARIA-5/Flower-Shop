@@ -1,0 +1,118 @@
+.navbar {
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #ffff; /* Forest Green */
+  transition: all 0.3s ease;
+  font-size: var(--font-size-mini);
+  font-family: var(--font-shanti);
+  color: black;
+  padding-left:3rem;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  margin-left: auto; /* Pushes navbar-right items to the right */
+}
+
+.navbar-link {
+  margin-right: 20px; 
+  font-size: 16px;
+  text-align: left; 
+  position: relative;
+  cursor: pointer;
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+  margin-left: 10px; /* Adjusted for space between icons */
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.9); /* Transparent white */
+  width: max-content; /* Adjust width based on content */
+  border: 1px solid #ccc; /* Thin border */
+  border-top: none; /* Remove top border */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  text-align: center; /* Align dropdown content to center */
+  top: calc(100% + 5px); /* Position dropdown below the parent link */
+  left: 50%; /* Center the dropdown relative to the parent link */
+  transform: translateX(-50%); /* Center horizontally */
+}
+
+.navbar-link:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f5f5f5; /* Light gray background on hover */
+}
+
+
+/* New styles for the cart count */
+.cart-container {
+  position: relative;
+}
+
+.cart-count {
+  position: absolute;
+  top: -8px; /* Adjust as needed */
+  right: -8px; /* Adjust as needed */
+  background-color: red;
+  color: white;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px; /* Adjust as needed */
+}
+
+@media screen and (max-width: 660px) {
+  .navbar {
+    justify-content: center; 
+   
+  }
+
+  .navbar-left {
+    flex: 1; /* Take up all available space */
+    justify-content: flex-start; /* Align items to the start */
+    margin-bottom: 10px;
+    font-size: 10px;
+    margin-right:10px;
+  }
+
+  .navbar-right {
+    flex: 1; /* Take up all available space */
+    justify-content: flex-end; /* Align items to the end */
+    margin-left: 0; /* Reset margin */
+    margin-bottom: 10px;
+  }
+
+  .navbar-link {
+    margin-right: 10px; /* Reset margin */
+    margin-bottom: 10px;
+  }
+}

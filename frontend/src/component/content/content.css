@@ -1,12 +1,12 @@
 @font-face {
   font-family: 'Emotion';
-  src: url('/Users/webprojectv/my-app/src/against regular.woff') format('woff');
+  src: url('/Users/webprojectv/frontend/src/against regular.woff') format('woff');
   font-weight: normal; 
   font-style: normal; 
 }
 @font-face {
   font-family: 'Playfair';
-  src: url('/Users/webprojectv/my-app/src/PlayfairDisplay-Regular.woff') format('woff'); /* Update the path to your font file */
+  src: url('/Users/webprojectv/frontend/src/PlayfairDisplay-Regular.woff') format('woff'); /* Update the path to your font file */
   font-weight: normal; 
   font-style: normal; 
 }

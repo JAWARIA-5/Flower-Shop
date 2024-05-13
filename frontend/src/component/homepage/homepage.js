@@ -13,6 +13,9 @@ class homepage extends Component {
   render() {
     const items = [
       {
+        label:'Home'
+      },
+      {
         label: 'About',
         options: ['Option 1', 'Option 2', 'Option 3']
       },

@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Emotion';
-    src: url('/Users/webprojectv/my-app/src/against regular.woff') format('woff');
+    src: url('/Users/webprojectv/frontend/src/against regular.woff') format('woff');
     /* You can add more src declarations for different file formats (e.g., woff2, ttf) */
     font-weight: normal; /* Adjust font weight if needed */
     font-style: normal; /* Adjust font style if needed */
